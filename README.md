@@ -67,6 +67,8 @@ https://huggingface.co/datasets/wikipedia
 
 В качестве модели, с которой сравнивались результаты обучения RWKV, была выбрана GPT-2 с 85 миллионами параметров.
 
+Код обучения модели представлен в [файле](gpt2-small-notebook.ipynb).
+
 В результате обучения на датасете за 5000 итераций модель научилась генерировать тексты следующего формата:
 
 ```plaintext
@@ -74,11 +76,15 @@ Soviet Union. The made also a tember helping size Didle Churcreas Britains Ny Mo
 Lover Ovenn her espell staid Vectorient It. In , Manultine happerble the history in Acudied at the that cell in the condicities diplace. Unted Senastitutions relied Cander with exitiventting wit
 ```
 
-![график обучения gpt2-85m](gpt2-85m.png)
+График на train и validation в процессе обучения
+![график обучения gpt2-85m](GPT2_losses.png)
 
 ### Результаты RWKV
 
 Количество параметров сети RWKV составило 90 миллионов:
+
+Код обучения модели представлен в [файле](rwkv-90m.ipynb).
+
 В результате обучения на датасете за 5000 итераций модель научилась генерировать тексты следующего формата:  
 
 ``` plaintext
@@ -93,7 +99,11 @@ Feminical moments are known in New Yorks hand, and who first away after the An c
 
 ### Результат работы / вывод
 
-...
+В итоге получилось, что:
+
+- Из представленных графиков выше видно, что loss и на трейне, и на валидации у RWKV получились ниже, чем у GPT-2. GPT-2 доходит до отметки в 1.5, RWKV к конце обучения ниже практически на 0.5
+- RWKV в среднем обучалась немного быстрее GPT-2, но разница почти не значительна
+- RWKV после обучения лучше улавливлает контекст и генерирует более связные предложения
 
 ### Команда и распределение задач
 
