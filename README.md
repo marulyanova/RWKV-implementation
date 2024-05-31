@@ -111,7 +111,7 @@ Feminical moments are known in New Yorks hand, and who first away after the An c
 ```
 
 Графики на train и validation в процессе обучения
-![график обучения rwkv-90m](rwkv_losses_train_val.png)
+![график обучения rwkv-90m](rwkv_losses_train_val.jpg)
 
 
 ### Результат работы / вывод
